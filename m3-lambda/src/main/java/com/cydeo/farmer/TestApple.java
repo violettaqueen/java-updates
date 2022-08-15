@@ -18,14 +18,19 @@ public class TestApple {
         List<Apple> greenApple = filterApples(inventory, new AppleGreenColorPredicate());
         System.out.println(greenApple);
 
+        ApplePredicate weightApple = (apple) -> apple.getWeight() > 200;
+        filterApples(inventory, weightApple);
+
+
     }
-    private static List<Apple> filterApples(List<Apple> inventory, ApplePredicate applePredicate){ // interface
-      // get all apples from inventory  // polymorphism
+
+    private static List<Apple> filterApples(List<Apple> inventory, ApplePredicate applePredicate) { // interface
+        // get all apples from inventory  // polymorphism
 
         List<Apple> result = new ArrayList<Apple>();
 
         for (Apple apple : inventory) {
-            if(applePredicate.test(apple)){
+            if (applePredicate.test(apple)) {
                 result.add(apple);
             }
         }

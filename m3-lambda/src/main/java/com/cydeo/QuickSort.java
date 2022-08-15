@@ -1,6 +1,4 @@
-package com.cydeo.tasks;
-
-import com.cydeo.Sorting;
+package com.cydeo;
 
 public class QuickSort implements Sorting {
 

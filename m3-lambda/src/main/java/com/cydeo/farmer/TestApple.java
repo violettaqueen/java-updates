@@ -13,12 +13,17 @@ public class TestApple {
         inventory.add(new Apple(150, Color.GREEN));
         inventory.add(new Apple(400, Color.RED));
 
+        inventory.forEach(apple -> System.out.println(apple));
+
+        // AppleHeavyPredicate abc = new AppleHeavyPredicate();
+
         List<Apple> heavyApple = filterApples(inventory, new AppleHeavyPredicate());
         System.out.println(heavyApple);
+
         List<Apple> greenApple = filterApples(inventory, new AppleGreenColorPredicate());
         System.out.println(greenApple);
 
-        ApplePredicate weightApple = (apple) -> apple.getWeight() > 200;
+        ApplePredicate weightApple = apple -> apple.getWeight() > 200;
         filterApples(inventory, weightApple);
 
 
@@ -35,5 +40,10 @@ public class TestApple {
             }
         }
         return result;
+    }
+    public static void prettyPrintApple(List<Apple> inventory, Color color){
+        for (Apple apple : inventory) {
+
+        }
     }
 }

@@ -2,6 +2,7 @@ package com.cydeo.farmer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class TestApple {
 
@@ -26,7 +27,17 @@ public class TestApple {
         ApplePredicate weightApple = apple -> apple.getWeight() > 200;
         filterApples(inventory, weightApple);
 
+        filterApples2(inventory, apple -> true);
 
+
+    }
+    private static void filterApples2(List<Apple> inventory, Predicate<Apple> a){
+
+        for (Apple apple : inventory) {
+            if(a.test(apple)){
+                System.out.println(apple.toString());
+            }
+        }
     }
 
     private static List<Apple> filterApples(List<Apple> inventory, ApplePredicate applePredicate) { // interface

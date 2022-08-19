@@ -23,7 +23,14 @@ public class Main {
                 new Course("MS",102)
         );
 
-        Stream<Course> myCourseStream = myCourses.stream();
+        Stream<Course> myCourseStream = myCourses.stream(); // most used
+
+        // creating stream Values , stream is returning instance
+
+        Stream <Integer> stream = Stream.of(1,2,3,4);
+
+
+
 
 
 

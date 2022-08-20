@@ -1,5 +1,6 @@
 package com.cydeo;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
@@ -21,7 +22,7 @@ public class StreamOperations {
                 .forEach(System.out::println);
 
         // DISTINCT
-        System.out.println("Distinct");
+        System.out.println("Distinct"); //unique elements
        Stream<Integer> str = list.stream()
                 .filter(i -> i %2==0)
                 .distinct();
@@ -33,6 +34,31 @@ public class StreamOperations {
                 .filter(i -> i%2==0)
                 .limit(1)
                 .forEach(System.out::println);
+
+        System.out.println("Skip");
+        list.stream()
+                .filter(i -> i %2==0)
+                .skip(1)
+                .forEach(System.out::println);
+
+        System.out.println("Map");
+        list.stream()
+                .map(number -> number*2)
+                .filter(i -> i%3==0)
+                .forEach(System.out::println);
+
+        List<String> words = new ArrayList<>(Arrays.asList("JAVA", "APPLE", "HONDA", "DEVELOPER"));
+
+        words.stream()
+                .map(String::length)
+                .forEach(System.out::println);
+
+
+
+
+
+
+
 
 
 

@@ -18,16 +18,21 @@ public class TestOrange {
         inventory.add(new Orange(150, Color.GREEN));
         inventory.add(new Orange(400, Color.RED));
 
+        //first behaviour
         OrangeFormatter orangeLambda = orange -> "An orange of " + orange.getWeight() + " g";
         prettyPrintOrange(inventory, orangeLambda);
+        //or
         prettyPrintOrange(inventory, orange -> "An orange of " + orange.getWeight() + " g");
 
+        System.out.println("---------------------------------------------------------------------------");
+
+        //second behavior
         OrangeFormatter fancyFormatter = orange -> {
             String str = orange.getWeight() > 200 ? "Heavy" : "Light";
             return "A" + str + " " + orange.getColor() + " orange";
         };
         prettyPrintOrange(inventory, fancyFormatter);
-        prettyPrintOrange2(inventory, orange -> System.out.println(orange));
+        prettyPrintOrange2(inventory, System.out::println);
     }
 
     public static void prettyPrintOrange2(List<Orange> inventory, Consumer<Orange> c) {

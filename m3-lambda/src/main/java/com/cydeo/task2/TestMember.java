@@ -25,7 +25,7 @@ public class TestMember {
         List<Person> result = new ArrayList<>();
 
         for (Person person : personList) {
-            if(checkMember.test(person)){  // abstract methd
+            if(checkMember.test(person)){  // abstract method
                 result.add(person);
             }
         }

@@ -19,7 +19,8 @@ public class FindingMatching {
         System.out.println("ALL MATCH");
         boolean isHealthy = getAll().stream().allMatch(dish -> dish.getCalories()<1000);
         System.out.println(isHealthy);
-        //REAL USAGE : when we search a product there is a filter, price between 500-900, show me all that match my filter
+        //REAL USAGE : when we search a product there is a filter, price between 500-900, show me
+        //all that match my filter
 
         System.out.println("ANY MATCH");
         if(getAll().stream().anyMatch(Dish::isVegetarian)){

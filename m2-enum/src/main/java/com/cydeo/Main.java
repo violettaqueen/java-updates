@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Throwable throwable = new Throwable();
 
         Apple a = new Apple(5);
 

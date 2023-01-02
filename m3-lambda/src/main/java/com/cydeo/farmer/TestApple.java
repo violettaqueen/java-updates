@@ -14,7 +14,7 @@ public class TestApple {
         inventory.add(new Apple(150, Color.GREEN));
         inventory.add(new Apple(400, Color.RED));
 
-        inventory.forEach(apple -> System.out.println(apple));
+        inventory.forEach(System.out::println);
 
         // AppleHeavyPredicate abc = new AppleHeavyPredicate();
 

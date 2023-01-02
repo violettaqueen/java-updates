@@ -15,14 +15,10 @@ public class UserTest {
         users.add(new User("Emma", "Pollard", 35));
 
         // Print all elements in the list: --> use Predicate
-        printName(users, user -> true);
+        printName(users, user -> true);  //behavior
 
         // Print a user which name begins from E
-        printName(users,user -> user.getLastName().startsWith("E"));
-
-
-
-
+        printName(users, user -> user.getLastName().startsWith("E")); //behavior
 
     }
     private static void printName(List<User> users, Predicate<User> p){

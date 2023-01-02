@@ -8,9 +8,10 @@ import java.util.function.Function;
 public class FunctionalInterfacePractice {
 
     public static void main(String[] args) {
+                          //array - reference name of int[] obj
+        Function<int[], List<Integer>> arrayToList = array -> {
 
-        Function<int[], List<Integer>> arrayToList = array -> { //array - reference name of int[] obj
-        List<Integer> list = new ArrayList<>();
+            List<Integer> list = new ArrayList<>();
             for (int each : array) {
                 list.add(each);
             }
@@ -18,7 +19,7 @@ public class FunctionalInterfacePractice {
         };
 
 
-        int[] arr = {1,20, 43,12};
+        int[] arr = {1, 20, 43, 12};
         List<Integer> list = arrayToList.apply(arr);
 
 

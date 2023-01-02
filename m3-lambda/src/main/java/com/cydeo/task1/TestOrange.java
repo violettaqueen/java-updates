@@ -34,14 +34,11 @@ public class TestOrange {
         prettyPrintOrange(inventory, fancyFormatter);
         prettyPrintOrange2(inventory, System.out::println);
     }
-
     public static void prettyPrintOrange2(List<Orange> inventory, Consumer<Orange> c) {
         for (Orange orange : inventory) {
             c.accept(orange);
         }
-
     }
-
     private static void prettyPrintOrange(List<Orange> inventory, OrangeFormatter formatter) {
 
         for (Orange orange : inventory) {

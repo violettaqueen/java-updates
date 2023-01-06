@@ -22,6 +22,7 @@ public class Main {
         // Reference to an instance method:
         Calculator obj = new Calculator();
         Calculate s3 = obj :: findMultiply;
+        s3.calculate(20, 20);
 
         Calculate s4 = new Calculator() :: findMultiply;
 
